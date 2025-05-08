@@ -8,7 +8,14 @@ while True:
     except ValueError: 
        print("Digite um numero valido")
        continue 
-    resposta = input("Voce quer continuar?: (s/n)").strip().lower()
-    if resposta != 's':
-        print("Pronto fechei!")
-        break
+    
+    while True:
+        resposta = input("Voce quer continuar?: (s/n)").strip().lower()
+        if resposta == 's':
+            break
+        elif resposta == 'n':
+            print('Pronto fechei!')
+            exit()
+        else:
+            print("Por favor digite somente s ou n")
+            
